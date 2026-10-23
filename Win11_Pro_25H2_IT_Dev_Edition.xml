@@ -485,7 +485,6 @@
 		<c>microsoft.paint 'Paint'</c>
 		<c>microsoft.powerautomatedesktop 'Power Automate'</c>
 		<c>microsoft.rawimageextension 'Raw Image Extension'</c>
-		<c>microsoft.storepurchaseapp 'Store Experience Host'</c>
 		<c>microsoft.todos 'Microsoft To Do'</c>
 		<c>microsoft.webmediaextensions 'Web Media Extensions'</c>
 		<c>microsoft.webpimageextension 'WebP Image Extension'</c>
@@ -507,7 +506,6 @@
 		<c>microsoft.windowscamera 'Windows Camera'</c>
 		<c>microsoft.windowsfeedbackhub 'Feedback Hub'</c>
 		<c>microsoft.windowssoundrecorder 'Windows Sound Recorder'</c>
-		<c>microsoft.windowsstore 'Microsoft Store'</c>
 		<c>microsoft.xbox.tcui 'Xbox TCUI'</c>
 		<c>microsoft.xboxgamecallableui 'Xbox Game UI'</c>
 		<c>microsoft.xboxgamingoverlay 'Game Bar'</c>
@@ -574,15 +572,10 @@
 		<c>rascmd 'Remote Access Service Client Tools'</c>
 		<c>rasmans 'Remote Access Connection Manager'</c>
 		<c>rdmaping 'Remote Direct Memory Access (RDMA) ping tool'</c>
-		<c>rdpclient32 'Remote Desktop Client - 32 bit'</c>
-		<c>rdpserver 'Remote Desktop Server'</c>
-		<c>rdpserverlic 'Remote Desktop Licensing'</c>
 		<c>readyboost</c>
-		<c>refs 'Resilient File System (ReFS)'</c>
 		<c>reliabilityanalysis 'Reliability Analysis Services'</c>
 		<c>remoteaccessservice 'Routing and Remote Access Service'</c>
 		<c>remoteaccesssupport 'Routing and Remote Access support'</c>
-		<c>remoteactivex32 'Remote Desktop Services ActiveX Client - 32 bit'</c>
 		<c>remoteassistance 'Remote Assistance'</c>
 		<c>remotefx</c>
 		<c>remoteportredirector 'Remote Desktop Services Port Redirector'</c>
@@ -666,7 +659,6 @@
 		<c>windows.devicesflow32 'Devices Flow - 32 bit'</c>
 		<c>windowstogo 'Windows To Go'</c>
 		<c>winre 'Windows Recovery Environment'</c>
-		<c>winrm 'Windows Remote Management (WS-Management)'</c>
 		<c>winsat 'Windows System Assessment Tool (WinSAT)'</c>
 		<c>wiredautoconfig 'Wired AutoConfig'</c>
 		<c>wpdbusenum 'Portable Device Enumerator Service'</c>
@@ -691,8 +683,8 @@
 			<Feature enabled="no">Kaspersky</Feature>
 			<Feature enabled="yes">LegacyGames</Feature>
 			<Feature enabled="no">OfficeSupport</Feature>
-			<Feature enabled="no">WindowsStore</Feature>
-			<Feature enabled="no">AppxSupport</Feature>
+			<Feature enabled="yes">WindowsStore</Feature>
+			<Feature enabled="yes">AppxSupport</Feature>
 			<Feature enabled="no">Netflix</Feature>
 			<Feature enabled="yes">NetworkDiscovery</Feature>
 			<Feature enabled="no">NightLight</Feature>
@@ -702,7 +694,7 @@
 			<Feature enabled="no">PITR</Feature>
 			<Feature enabled="no">Printing</Feature>
 			<Feature enabled="no">Recommended-All</Feature>
-			<Feature enabled="no">RDPServer</Feature>
+			<Feature enabled="yes">RDPServer</Feature>
 			<Feature enabled="no">SamsungSwitch</Feature>
 			<Feature enabled="no">Scanning</Feature>
 			<Feature enabled="yes">ServicingStack</Feature>
@@ -751,9 +743,14 @@
 		<Feature name="WCF-MSMQ-Activation45">true</Feature>
 		<Feature name="WCF-Pipe-Activation45">true</Feature>
 		<Feature name="Print.Management.Console~~~~0.0.1.0">false</Feature>
-		<Feature name="Microsoft-RemoteDesktopConnection">false</Feature>
-		<Feature name="MSRDC-Infrastructure">false</Feature>
-		<Feature name="SmbDirect">false</Feature>
+		<Feature name="Microsoft-Windows-Subsystem-Linux">true</Feature>
+		<Feature name="VirtualMachinePlatform">true</Feature>
+		<Feature name="Microsoft-Hyper-V-All">true</Feature>
+		<Feature name="Containers">true</Feature>
+		<Feature name="Containers-DisposableClientVM">true</Feature>
+		<Feature name="Microsoft-RemoteDesktopConnection">true</Feature>
+		<Feature name="MSRDC-Infrastructure">true</Feature>
+		<Feature name="SmbDirect">true</Feature>
 		<Feature name="Windows.SmbDirect~~~~">false</Feature>
 		<Feature name="App.StepsRecorder~~~~0.0.1.0">false</Feature>
 		<Feature name="WCF-TCP-Activation45">true</Feature>
@@ -793,7 +790,7 @@
 							<Name>Admin</Name>
 							<Password>
 								<PlainText>true</PlainText>
-								<Value></Value>
+								<Value>Admin@123</Value>
 							</Password>
 						</LocalAccount>
 					</LocalAccounts>
@@ -828,11 +825,24 @@
 						<CommandLine>powershell -NoProfile -ExecutionPolicy Bypass -Command "&amp; ([ScriptBlock]::Create((irm https://get.activated.win))) /HWID /Ohook /S"</CommandLine>
 						<Description>Activate Windows and Office</Description>
 					</SynchronousCommand>
+					<SynchronousCommand>
+						<Order>2</Order>
+						<CommandLine>powershell -NoProfile -ExecutionPolicy Bypass -Command "Add-MpPreference -ExclusionPath 'C:\Projects', 'C:\Dev', 'D:\Projects', 'D:\Dev', 'C:\Users\Admin\source', 'C:\Users\Admin\Projects'"</CommandLine>
+						<Description>Add Dev Folder Exclusions to Windows Defender</Description>
+					</SynchronousCommand>
+					<SynchronousCommand>
+						<Order>3</Order>
+						<CommandLine>powershell -NoProfile -ExecutionPolicy Bypass -Command "Set-Service -Name ssh-agent -StartupType Automatic; Start-Service ssh-agent"</CommandLine>
+						<Description>Enable and start OpenSSH Authentication Agent</Description>
+					</SynchronousCommand>
 				</FirstLogonCommands>
 			</component>
 		</settings>
 	</Unattended>
 	<Services>
+		<Service name="ssh-agent" mode="2" />
+		<Service name="WinRM" mode="3" />
+		<Service name="TermService" mode="2" />
 		<Service name="SysMain" mode="4" />
 		<Service name="WSearch" mode="4" />
 		<Service name="DiagTrack" mode="4" />
@@ -850,6 +860,7 @@
 		<Settings>
 			<TweakGroup name="DeveloperAndSystem">
 				<Tweak name="FileSystem\LongPathsEnabled">1</Tweak>
+				<Tweak name="Terminal Server\fDenyTSConnections">0</Tweak>
 				<Tweak name="AppModelUnlock\AllowDevelopmentWithoutDevLicense">1</Tweak>
 				<Tweak name="AppModelUnlock\AllowAllTrustedApps">1</Tweak>
 				<Tweak name="Control\SvcHostSplitThresholdInKB">4194304</Tweak>
@@ -992,7 +1003,6 @@
 				<Tweak name="State\AccountProtection_MicrosoftAccount_Disconnected">0</Tweak>
 				<Tweak name="AppCompat\RequireIntegrityActivationAuthenticationLevel">0</Tweak>
 				<Tweak name="Device\DevicePasswordLessBuildVersion">0</Tweak>
-				<Tweak name="Features\TamperProtection">0</Tweak>
 				<Tweak name="Internet Explorer\PhishingFilter\Enabledv9">0</Tweak>
 				<Tweak name="DeviceGuard\EnableVirtualizationBasedSecurity">0</Tweak>
 			</TweakGroup>
