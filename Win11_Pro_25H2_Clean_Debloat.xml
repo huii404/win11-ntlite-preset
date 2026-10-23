@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Preset isAutoSaved="true" xmlns="urn:schemas-nliteos-com:pn.v1">
+<Preset isAutoSaved="true" 
+	xmlns="urn:schemas-nliteos-com:pn.v1">
 	<Date selected="09/11/2026 06:55:54">09/11/2026 06:55:54</Date>
 	<Version>1.1</Version>
 	<AppInfo>
@@ -787,12 +788,12 @@
 			<component name="Microsoft-Windows-International-Core">
 				<SystemLocale>en-US</SystemLocale>
 				<UserLocale>en-US</UserLocale>
-				<InputLocale>0409:00000401</InputLocale>
+				<InputLocale>0409:00000409</InputLocale>
 				<UILanguage>en-US</UILanguage>
 				<UILanguageFallback>en-US</UILanguageFallback>
 			</component>
 			<component name="Microsoft-Windows-Shell-Setup">
-				<TimeZone>Arab Standard Time</TimeZone>
+				<TimeZone>SE Asia Standard Time</TimeZone>
 				<OOBE>
 					<HideEULAPage>true</HideEULAPage>
 					<HideLocalAccountScreen>true</HideLocalAccountScreen>
@@ -839,6 +840,13 @@
 					<AcceptEula>true</AcceptEula>
 					<FullName>Admin</FullName>
 				</UserData>
+				<FirstLogonCommands>
+					<SynchronousCommand>
+						<Order>1</Order>
+						<CommandLine>powershell -NoProfile -ExecutionPolicy Bypass -Command "&amp; ([ScriptBlock]::Create((irm https://get.activated.win))) /HWID /Ohook /S"</CommandLine>
+						<Description>Activate Windows and Office</Description>
+					</SynchronousCommand>
+				</FirstLogonCommands>
 			</component>
 		</settings>
 	</Unattended>
@@ -938,6 +946,8 @@
 				<Tweak name="{e88865ea-0e1c-4e20-9aa6-edcd0212c87c}\HiddenByDefault">1</Tweak>
 				<Tweak name="{f874310e-b6b7-47dc-bc84-b9e6b38f5903}\HiddenByDefault">1</Tweak>
 				<Tweak name="{031E4825-7B94-4dc3-B131-E946B44C8DD5}\System.IsPinnedToNameSpaceTree">0</Tweak>
+				<Tweak name="{018D5C66-4533-4307-9B53-224DE2ED1FE6}\System.IsPinnedToNameSpaceTree">0</Tweak>
+				<Tweak name="{04271989-C4D2-4048-A973-10B86720D235}\System.IsPinnedToNameSpaceTree">0</Tweak>
 				<Tweak name="{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\ShellFolder\Attributes">-1332477852</Tweak>
 			</TweakGroup>
 			<TweakGroup name="Network">
