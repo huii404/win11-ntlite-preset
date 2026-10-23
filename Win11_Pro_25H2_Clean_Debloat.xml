@@ -139,8 +139,6 @@
 		<c>hwsupport_wia 'Windows Image Acquisition (WIA)'</c>
 		<c>ias 'Internet Authentication Service (IAS)'</c>
 		<c>iis 'Internet Information Server (IIS)'</c>
-		<c>inputservice32 'Input Service (CTFMON) - 32 bit'</c>
-		<c>inputswitchtoasthandler 'Input Switch Toast Handler'</c>
 		<c>insiderhub 'Windows Insider Program'</c>
 		<c>ipt 'Identity Protection Technology (Intel IPT)'</c>
 		<c>ipxlatcfg 'IP Translation Configuration Service'</c>
@@ -185,7 +183,6 @@
 		<c>kl-00000427 'Lithuanian IBM'</c>
 		<c>kl-00000428 'Tajik'</c>
 		<c>kl-00000429 'Persian'</c>
-		<c>kl-0000042a 'Vietnamese'</c>
 		<c>kl-0000042b 'Armenian Eastern (Legacy)'</c>
 		<c>kl-0000042c 'Azerbaijani Latin'</c>
 		<c>kl-0000042e 'Sorbian Standard (Legacy)'</c>
@@ -401,7 +398,6 @@
 		<c>langhindi 'Hindi'</c>
 		<c>langhungarian 'Hungarian'</c>
 		<c>langicelandic 'Icelandic'</c>
-		<c>langime 'Input Method Editor (IME)'</c>
 		<c>langimejp 'Japanese (IME)'</c>
 		<c>langimeko 'Korean (IME)'</c>
 		<c>langimetc 'Chinese Traditional (IME)'</c>
@@ -451,7 +447,6 @@
 		<c>languyghur 'Uyghur'</c>
 		<c>languzbek 'Uzbek'</c>
 		<c>langvalencian 'Valencian'</c>
-		<c>langvietnamese 'Vietnamese'</c>
 		<c>langwelsh 'Welsh'</c>
 		<c>livecaptions 'Live Captions'</c>
 		<c>location 'Location Service'</c>
@@ -788,7 +783,7 @@
 			<component name="Microsoft-Windows-International-Core">
 				<SystemLocale>en-US</SystemLocale>
 				<UserLocale>en-US</UserLocale>
-				<InputLocale>0409:00000409</InputLocale>
+				<InputLocale>0409:00000409;042a:0001042a</InputLocale>
 				<UILanguage>en-US</UILanguage>
 				<UILanguageFallback>en-US</UILanguageFallback>
 			</component>
@@ -1123,20 +1118,5 @@
 			</PostApply>
 		</Commands>
 	</ApplyOptions>
-	<Execution BeforeLogonMode="0">
-		<Add>
-			<Item type="18">
-				<Path>C:\Users\Admin\Downloads\Files\Opitional\NTLite\ms-gamebar-annoyance.bat</Path>
-				<Params></Params>
-				<DestMode>1</DestMode>
-				<Index>1000</Index>
-			</Item>
-			<Item type="18">
-				<Path>C:\Users\Admin\Downloads\Files\Ninite 7Zip Chrome Steam Installer.exe</Path>
-				<Params></Params>
-				<DestMode>1</DestMode>
-				<Index>1001</Index>
-			</Item>
-		</Add>
-	</Execution>
+	<Execution BeforeLogonMode="0"></Execution>
 </Preset>
