@@ -1,0 +1,31 @@
+# OS and System Temporary Files
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.tmp
+*.bak
+*.log
+
+# Windows Disk Images and Mounted Files (Never push huge files)
+*.iso
+*.wim
+*.esd
+*.swm
+*.vhd
+*.vhdx
+*.vmdk
+*.vdi
+*.nvram
+
+# NTLite Logs and Temporary Scratch Dirs
+[MOUNTDIR]/
+Mount/
+scratch/
+Logs/
+*.xml.bak
+
+# IDE & Editor Settings
+.vscode/
+.idea/
+*.suo
+*.user
