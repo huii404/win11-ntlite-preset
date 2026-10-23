@@ -18,6 +18,15 @@ Preset tinh chỉnh cấu hình **NTLite (.xml)** dành cho **Windows 11 (24H2 /
 
 ---
 
+## 📁 Danh sách Preset có sẵn trong Repo
+
+| Tên File Preset | Ngôn ngữ / Bộ gõ | Phù hợp với |
+| :--- | :--- | :--- |
+| **`Win11_Pro_25H2_VN_Telex_EN.xml`** *(Khuyên dùng)* | **Tiếng Việt Telex (UTF-8) + English (US)**<br>• Tích hợp sẵn bộ gõ Telex của Windows 11.<br>• Phím tắt `Win + Space` chuyển đổi ENG ⮂ VIE.<br>• Múi giờ Việt Nam (GMT+7 Hà Nội).<br>• Tương thích 100% với EVKey, UniKey, OpenKey. | Người dùng Việt Nam cần gõ văn bản tiếng Việt mượt mà ngay sau khi cài Win. |
+| **`Win11_Pro_25H2_Clean_Debloat.xml`** | **English (US)** tiêu chuẩn quốc tế.<br>• Gỡ sạch toàn bộ gói ngôn ngữ phụ. | Người dùng thích bản Windows hoàn toàn tiếng Anh siêu sạch. |
+
+---
+
 ## 📋 Chuẩn bị trước khi làm
 
 1. **Phần mềm NTLite:** Tải phiên bản mới nhất từ trang chủ [NTLite Download](https://www.ntlite.com/download/).
