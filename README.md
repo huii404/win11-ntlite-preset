@@ -20,10 +20,11 @@ Preset tinh chỉnh cấu hình **NTLite (.xml)** dành cho **Windows 11 (24H2 /
 
 ## 📁 Danh sách Preset có sẵn trong Repo
 
-| Tên File Preset | Ngôn ngữ / Bộ gõ | Phù hợp với |
+| Tên File Preset | Đối tượng & Mục đích | Tính năng nổi bật |
 | :--- | :--- | :--- |
-| **`Win11_Pro_25H2_VN_Telex_EN.xml`** *(Khuyên dùng)* | **Tiếng Việt Telex (UTF-8) + English (US)**<br>• Tích hợp sẵn bộ gõ Telex của Windows 11.<br>• Phím tắt `Win + Space` chuyển đổi ENG ⮂ VIE.<br>• Múi giờ Việt Nam (GMT+7 Hà Nội).<br>• Tương thích 100% với EVKey, UniKey, OpenKey. | Người dùng Việt Nam cần gõ văn bản tiếng Việt mượt mà ngay sau khi cài Win. |
-| **`Win11_Pro_25H2_Clean_Debloat.xml`** | **English (US)** tiêu chuẩn quốc tế.<br>• Gỡ sạch toàn bộ gói ngôn ngữ phụ. | Người dùng thích bản Windows hoàn toàn tiếng Anh siêu sạch. |
+| **`Win11_Pro_25H2_IT_Dev_Edition.xml`** ⭐ *(Khuyên dùng cho dân IT/Coder)* | **Dành riêng cho Lập trình viên, Kỹ sư IT, Quản trị mạng, Vọc vạch Windows API** | • **Giữ nguyên 100% công cụ IT:** Giữ `OpenSSH`, `Edge WebView2` (chạy VS Code, Docker Desktop, Postman), `Hyper-V` (hỗ trợ WSL2, VMware, VirtualBox), `PktMon` (bắt gói tin mạng), `PerfMon`, `Kernel Debug`, `WMI Tools`.<br>• **Gọt sạch rác & game:** Purge toàn bộ Xbox, Game DVR, rác tiêu dùng.<br>• **Tối ưu máy 4GB:** Tắt `SysMain`, gộp tiến trình `SvcHost`, tắt triệt để `hiberfil.sys` thu hồi 3GB–8GB ổ C, bật sẵn **Developer Mode** & **LongPathsEnabled** (>260 ký tự cho `node_modules`).<br>• Tích hợp gõ Tiếng Việt Telex UTF-8 + US English. |
+| **`Win11_Pro_25H2_VN_Telex_EN.xml`** | **Người dùng văn phòng & phổ thông tại Việt Nam** | • Tích hợp sẵn bộ gõ Telex của Windows 11 + ENG (US).<br>• Phím tắt `Win + Space` chuyển đổi ENG ⮂ VIE.<br>• Múi giờ Việt Nam (GMT+7 Hà Nội).<br>• Tương thích 100% với EVKey, UniKey. |
+| **`Win11_Pro_25H2_Clean_Debloat.xml`** | **Bản quốc tế cơ bản** | • Tiếng Anh (US) siêu sạch, gỡ toàn bộ gói ngôn ngữ phụ. |
 
 ---
 
