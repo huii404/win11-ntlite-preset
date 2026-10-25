@@ -1,0 +1,547 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Preset isAutoSaved="false" xmlns="urn:schemas-nliteos-com:pn.v1">
+	<Date>10/24/2026 23:51:00</Date>
+	<Version>1.1</Version>
+	<AppInfo>
+		<Version>2026.10.12522</Version>
+		<Licensed>No</Licensed>
+		<Protections>Yes</Protections>
+		<Host>Windows 11 Professional 26H2 x64 - 10.0.26300.9550 (en-US)</Host>
+	</AppInfo>
+	<ImageInfo>
+		<Version mode="online">Windows 11 Professional 26H2 x64 - 10.0.26300.9550 (en-US)</Version>
+		<GUID>a6a10238</GUID>
+	</ImageInfo>
+	<RemoveComponents AppRemovalMode="DISM" RemovalMode="Custom" RemovalModeAppCleanup="false" RemovalModeLegacy="true">
+		<c>1527c705-839a-4832-9118-54d4bd6a0c89 'File Picker'</c>
+		<c>appv 'Ảo hoá Ứng dụng (App-V)'</c>
+		<c>branchcacheclient 'Khách hàng BranchCache'</c>
+		<c>c5e2524a-ea46-4f67-841f-6a9465d9d515 'Trình khám phá tệp (Lagecy)'</c>
+		<c>e2a4f912-2574-4a75-9bb0-0d023378592b 'Trình giải quyết khiếu nại về Ứng dụng'</c>
+		<c>easeofaccessthemes 'Theme Dễ Truy Cập'</c>
+		<c>embeddedexperience 'Khóa thiết bị (Trải nghiệm nhúng)'</c>
+		<c>enhancedstorage 'Lưu trữ nâng cao'</c>
+		<c>enterpriseclientsync 'Máy khách Thư mục công việc'</c>
+		<c>f46d4000-fd22-4db4-ac8e-4e1ddde828fe 'Thêm hộp thoại Đề xuất Thư mục'</c>
+		<c>fciclient 'Trình quản lý tài nguyên máy chủ tệp'</c>
+		<c>help 'Nội dung Trợ giúp Windows'</c>
+		<c>helpsupport 'Hỗ trợ tệp trợ giúp (CHM)'</c>
+		<c>hwsupport_internetprintingclient 'Trình khách in Internet'</c>
+		<c>hwsupport_scanner 'Máy quét'</c>
+		<c>hwsupport_wia 'Windows Image Acquisition (WIA)'</c>
+		<c>ias 'Dịch vụ Xác thực Internet (IAS)'</c>
+		<c>iis 'Máy chủ Thông tin Internet (IIS)'</c>
+		<c>la57 'Địa chỉ tuyến tính 57-bit'</c>
+		<c>langafrikaans 'Afrikaans'</c>
+		<c>langalbanian 'Tiếng Alban'</c>
+		<c>langamharic 'Amharic'</c>
+		<c>langarabic 'Tiếng Ả Rập'</c>
+		<c>langarmenian 'Armenian'</c>
+		<c>langassamese 'Assamese'</c>
+		<c>langazerbaijani 'Azerbaijani'</c>
+		<c>langbasque 'Tiếng Basque'</c>
+		<c>langbelarusian 'Belarusian'</c>
+		<c>langbengali_india 'Tiếng Bengal (Ấn Độ)'</c>
+		<c>langbosnian 'Bosnian'</c>
+		<c>langbulgarian 'Tiếng Bulgaria'</c>
+		<c>langcatalan 'Tiếng Catalan'</c>
+		<c>langcherokee 'Cherokee'</c>
+		<c>langchineses 'Tiếng Trung giản thể'</c>
+		<c>langchineset 'Tiếng Trung phồn thể'</c>
+		<c>langcroatian 'Tiếng Croatia'</c>
+		<c>langczech 'Tiếng Séc'</c>
+		<c>langdanish 'Tiếng Đan Mạch'</c>
+		<c>langdutch 'Tiếng Hà Lan'</c>
+		<c>langenglishgb 'Tiếng Anh (GB)'</c>
+		<c>langestonian 'Tiếng Estonia'</c>
+		<c>langfilipino 'Filipino'</c>
+		<c>langfinnish 'Tiếng Phần Lan'</c>
+		<c>langfrench 'Tiếng Pháp'</c>
+		<c>langfrenchcanadian 'Pháp (Canada)'</c>
+		<c>langgalician 'Tiếng Galicia'</c>
+		<c>langgeorgian 'Tiếng Georgia'</c>
+		<c>langgerman 'Tiếng Đức'</c>
+		<c>langgreek 'Tiếng Hy Lạp'</c>
+		<c>langgujarati 'Tiếng Gujarat'</c>
+		<c>langhebrew 'Tiếng Do Thái'</c>
+		<c>langhindi 'Tiếng Hindi'</c>
+		<c>langhungarian 'Tiếng Hungary'</c>
+		<c>langicelandic 'Tiếng Iceland'</c>
+		<c>langimejp 'Tiếng Nhật (IME)'</c>
+		<c>langimeko 'Tiếng Hàn (IME)'</c>
+		<c>langimetc 'Tiếng Trung phồn thể (IME)'</c>
+		<c>langindonesian 'Tiếng Indonesia'</c>
+		<c>langirish 'Irish'</c>
+		<c>langitalian 'Tiếng Ý'</c>
+		<c>langjapanese 'Tiếng Nhật'</c>
+		<c>langkannada 'Tiếng Kannada'</c>
+		<c>langkazakh 'Tiếng Kazakh'</c>
+		<c>langkhmer 'Tiếng Khmer'</c>
+		<c>langkonkani 'Tiếng Konkani'</c>
+		<c>langkorean 'Tiếng Hàn'</c>
+		<c>langlao 'Tiếng Lào'</c>
+		<c>langlatvian 'Tiếng Latvia'</c>
+		<c>langlithuanian 'Tiếng Litva'</c>
+		<c>langluxembourgish 'Tiếng Luxembourg'</c>
+		<c>langmacedonian 'Tiếng Macedonia'</c>
+		<c>langmalay_malaysia 'Tiếng Mã Lai (Malaysia)'</c>
+		<c>langmalayalam 'Tiếng Malayalam'</c>
+		<c>langmaltese 'Tiếng Malta'</c>
+		<c>langmaori 'Tiếng Maori'</c>
+		<c>langmarathi 'Tiếng Marathi'</c>
+		<c>langnepali 'Tiếng Nepal'</c>
+		<c>langnorwegian 'Tiếng Na Uy'</c>
+		<c>langodia 'Tiếng Odia'</c>
+		<c>langpersian 'Persian'</c>
+		<c>langpolish 'Tiếng Ba Lan'</c>
+		<c>langportuguesebr 'Tiếng Bồ Đào Nha (Brazil)'</c>
+		<c>langportuguesept 'Tiếng Bồ Đào Nha'</c>
+		<c>langpunjabi 'Tiếng Punjab'</c>
+		<c>langquechua 'Tiếng Quechua'</c>
+		<c>langromanian 'Tiếng Romania'</c>
+		<c>langrussian 'Tiếng Nga'</c>
+		<c>langscottish 'Scottish'</c>
+		<c>langserbian 'Tiếng Serbia'</c>
+		<c>langslovak 'Tiếng Slovak'</c>
+		<c>langslovenian 'Tiếng Slovenia'</c>
+		<c>langspanish 'Tiếng Tây Ban Nha'</c>
+		<c>langswedish 'Tiếng Thụy Điển'</c>
+		<c>langtamil 'Tamil'</c>
+		<c>langtatar 'Tiếng Tatar'</c>
+		<c>langtelugu 'Telugu'</c>
+		<c>langthai 'Thai'</c>
+		<c>langturkish 'Turkish'</c>
+		<c>langukrainian 'Ukrainian'</c>
+		<c>langurdu 'Urdu'</c>
+		<c>languyghur 'Tiếng Uyghur'</c>
+		<c>languzbek 'Tiếng Uzbek'</c>
+		<c>langvalencian 'Valencian'</c>
+		<c>langwelsh 'Welsh'</c>
+		<c>manifestbackup 'Sao lưu Manifest (WinSxS\Backup)'</c>
+		<c>mediaplayernetworksharing 'Dịch vụ Chia sẻ Mạng WMP'</c>
+		<c>mediaplayernetworksharing32 'Dịch vụ Chia sẻ Mạng WMP - 32 bit'</c>
+		<c>microsoft.aad.brokerplugin 'Tài khoản trường học hoặc công ty'</c>
+		<c>microsoft.accountscontrol 'Email và tài khoản'</c>
+		<c>microsoft.asynctextservice 'AsyncTextService'</c>
+		<c>microsoft.bioenrollment 'Thiết lập Windows Hello'</c>
+		<c>microsoft.creddialoghost 'Hộp thoại Thông tin đăng nhập'</c>
+		<c>microsoft.ecapp 'Điều khiển bằng Mắt'</c>
+		<c>microsoft.heifimageextension 'Phần mở rộng hình ảnh HEIF'</c>
+		<c>microsoft.lockapp 'Màn hình Khóa Mặc định của Windows'</c>
+		<c>microsoft.microsoftedgedevtoolsclient 'Microsoft Edge DevTools Client'</c>
+		<c>microsoft.paint 'Paint'</c>
+		<c>microsoft.powerautomatedesktop 'Power Automate'</c>
+		<c>microsoft.rawimageextension 'Phần mở rộng Hình ảnh Thô'</c>
+		<c>microsoft.storepurchaseapp 'Máy chủ Trải nghiệm Store'</c>
+		<c>microsoft.webmediaextensions 'Phần mở rộng Phương tiện Web'</c>
+		<c>microsoft.webpimageextension 'Phần mở rộng Hình ảnh WebP'</c>
+		<c>microsoft.windows.assignedaccesslockapp 'Ứng dụng Khóa Truy nhập Được gán'</c>
+		<c>microsoft.windows.contentdeliverymanager 'Quản lý Phân phối Nội dung'</c>
+		<c>microsoft.windows.narratorquickstart 'Trình tường thuật'</c>
+		<c>microsoft.windows.oobenetworkcaptiveportal 'Luồng Trang Xác thực'</c>
+		<c>microsoft.windows.oobenetworkconnectionflow 'Quy trình kết nối mạng'</c>
+		<c>microsoft.windows.parentalcontrols 'Microsoft Family Safety'</c>
+		<c>microsoft.windows.peopleexperiencehost 'Trải nghiệm Windows Shell'</c>
+		<c>microsoft.windows.photos 'Ảnh của Microsoft'</c>
+		<c>microsoft.windows.pinningconfirmationdialog 'PinningConfirmationDialog'</c>
+		<c>microsoft.windows.secureassessmentbrowser 'Take a Test'</c>
+		<c>microsoft.windows.xgpuejectdialog 'Tháo Thiết bị An toàn'</c>
+		<c>microsoft.windowsalarms 'Windows Clock'</c>
+		<c>microsoft.windowscalculator 'Windows Calculator'</c>
+		<c>microsoft.windowssoundrecorder 'Windows Sound Recorder'</c>
+		<c>microsoft.windowsstore 'Cửa hàng Microsoft'</c>
+		<c>microsoft.xbox.tcui 'Xbox TCUI'</c>
+		<c>microsoft.xboxgamecallableui 'Xbox Game UI'</c>
+		<c>mobilepc</c>
+		<c>mobilepc_location 'Thông báo vị trí'</c>
+		<c>mobilepc_networkprojection 'Phép chiếu Mạng'</c>
+		<c>mobilepc_sensors 'Cảm biến'</c>
+		<c>msmq 'Hàng đợi Tin nhắn Microsoft (MSMQ)'</c>
+		<c>msteams 'Microsoft Teams'</c>
+		<c>otherthemes 'Theme Cá nhân hoá Windows'</c>
+		<c>photoviewer32 'Trình xem Ảnh - 32 bit'</c>
+		<c>printtopdf 'In ra PDF'</c>
+		<c>rdpclient32 'Khách hàng Máy tính để bàn từ xa - 32 bit'</c>
+		<c>remoteaccessservice 'Dịch vụ Định tuyến và Truy cập từ xa'</c>
+		<c>remoteactivex32 'Khách hàng ActiveX Dịch vụ Máy tính để bàn Từ xa - 32 bit'</c>
+		<c>remoteassistance 'Hỗ trợ từ xa'</c>
+		<c>remotefx</c>
+		<c>remoteportredirector 'Trình chuyển hướng Cổng Dịch vụ Máy tính để bàn từ xa'</c>
+		<c>rotationmanager 'Trình quản lý Tự động Xoay'</c>
+		<c>securestartup 'Mã hóa ổ BitLocker'</c>
+		<c>sharemediacpl 'Bảng điều khiển Chia sẻ Media'</c>
+		<c>simpletcp 'Dịch vụ TCP/IP Đơn giản'</c>
+		<c>snmp 'Giao thức Quản lý Mạng Đơn giản (SNMP)'</c>
+		<c>stici 'Trình cài đặt lớp Hình ảnh tĩnh'</c>
+		<c>systemrestore 'Khôi phục Hệ thống'</c>
+		<c>telnetclient 'Khách hàng Telnet'</c>
+		<c>tftpclient 'Khách hàng TFTP'</c>
+		<c>uev 'Ảo hoá Trải nghiệm Người dùng (UE-V)'</c>
+		<c>vpn 'Hỗ trợ Mạng riêng ảo (VPN)'</c>
+		<c>wallet 'Dịch vụ Ví'</c>
+		<c>wallpapers 'Hình nền (Chủ đề)'</c>
+		<c>windows.cbspreview 'Xem trước Mã vạch Windows'</c>
+		<c>windowstogo 'Windows To Go'</c>
+		<c>winsat 'Công cụ Đánh giá Hệ thống Windows (WinSAT)'</c>
+	</RemoveComponents>
+	<Compatibility>
+		<ComponentFeatures>
+			<Feature enabled="no">AppGuard</Feature>
+			<Feature enabled="no">Battle.net</Feature>
+			<Feature enabled="yes">Bluetooth</Feature>
+			<Feature enabled="yes">VSS</Feature>
+			<Feature enabled="yes">WindowsSecurity</Feature>
+			<Feature enabled="no">USBCamera</Feature>
+			<Feature enabled="no">CapFrameX</Feature>
+			<Feature enabled="yes">WinSetup</Feature>
+			<Feature enabled="yes">SnippingTool</Feature>
+			<Feature enabled="yes">WindowsUpdate</Feature>
+			<Feature enabled="no">WindowsStore</Feature>
+			<Feature enabled="no">Discord</Feature>
+			<Feature enabled="yes">Docker</Feature>
+			<Feature enabled="yes">EAC</Feature>
+			<Feature enabled="yes">FileSharing</Feature>
+			<Feature enabled="no">VPN</Feature>
+			<Feature enabled="no">AppxSupport</Feature>
+			<Feature enabled="no">iCloud</Feature>
+			<Feature enabled="no">Printing</Feature>
+			<Feature enabled="no">Kaspersky</Feature>
+			<Feature enabled="yes">NetworkDiscovery</Feature>
+			<Feature enabled="no">PITR</Feature>
+			<Feature enabled="yes">SFC</Feature>
+			<Feature enabled="yes">Activation</Feature>
+			<Feature enabled="no">OfficeSupport</Feature>
+			<Feature enabled="yes">Hyper-V</Feature>
+			<Feature enabled="no">Scanning</Feature>
+			<Feature enabled="no">RDPServer</Feature>
+			<Feature enabled="no">Netflix</Feature>
+			<Feature enabled="yes">ServicingStack</Feature>
+			<Feature enabled="yes">NvidiaSetup</Feature>
+			<Feature enabled="yes">HostRefresh</Feature>
+			<Feature enabled="no">OneNote</Feature>
+			<Feature enabled="no">VideoPlayback</Feature>
+			<Feature enabled="no">DefaultFonts</Feature>
+			<Feature enabled="no">SamsungSwitch</Feature>
+			<Feature enabled="no">YubiKey</Feature>
+			<Feature enabled="no">Spotify</Feature>
+			<Feature enabled="no">TeamViewer</Feature>
+			<Feature enabled="no">Recommended-Tablet</Feature>
+			<Feature enabled="no">TpmSecureBoot</Feature>
+			<Feature enabled="yes">LegacyGames</Feature>
+			<Feature enabled="yes">OOBE</Feature>
+			<Feature enabled="no">ShellSearchSupport</Feature>
+			<Feature enabled="no">USB</Feature>
+			<Feature enabled="no">USBModem</Feature>
+			<Feature enabled="yes">VisualStudio</Feature>
+			<Feature enabled="no">WFC</Feature>
+			<Feature enabled="yes">WLAN</Feature>
+			<Feature enabled="no">XboxApp</Feature>
+			<Feature enabled="no">NightLight</Feature>
+			<Feature enabled="no">Recommended-All</Feature>
+			<Feature enabled="no">SafeMode</Feature>
+		</ComponentFeatures>
+		<MachineDrivers>
+			<Machine enabled="no">Hyper-V VM</Machine>
+			<Machine enabled="no">HostMachine</Machine>
+			<Machine enabled="no">Parallels VM</Machine>
+			<Machine enabled="no">Virtual Box VM</Machine>
+			<Machine enabled="no">VMware VM</Machine>
+		</MachineDrivers>
+	</Compatibility>
+	<Features>
+		<Feature name="NetFx4Extended-ASPNET45">true</Feature>
+		<Feature name="Language.Handwriting~~~en-us~0.0.1.0">false</Feature>
+		<Feature name="Language.OCR~~~en-us~0.0.1.0">false</Feature>
+		<Feature name="Language.Speech~~~en-us~0.0.1.0">false</Feature>
+		<Feature name="Language.TextToSpeech~~~en-us~0.0.1.0">false</Feature>
+		<Feature name="Language.Basic~~~en-us~0.0.1.0">false</Feature>
+		<Feature name="OneCoreUAP.OneSync~~~~0.0.1.0">false</Feature>
+		<Feature name="HostGuardian">true</Feature>
+		<Feature name="WCF-HTTP-Activation45">true</Feature>
+		<Feature name="MathRecognizer~~~~0.0.1.0">false</Feature>
+		<Feature name="WCF-MSMQ-Activation45">true</Feature>
+		<Feature name="WCF-Pipe-Activation45">true</Feature>
+		<Feature name="AppServerClient">true</Feature>
+		<Feature name="MSRDC-Infrastructure">false</Feature>
+		<Feature name="SmbDirect">false</Feature>
+		<Feature name="Windows.SmbDirect~~~~">false</Feature>
+		<Feature name="App.StepsRecorder~~~~0.0.1.0">false</Feature>
+		<Feature name="WCF-TCP-Activation45">true</Feature>
+		<Feature name="WindowsMediaPlayer">false</Feature>
+	</Features>
+	<Packages>
+		<Options>
+			<CleanHotfixedLeftovers>2</CleanHotfixedLeftovers>
+			<CleanApps>true</CleanApps>
+		</Options>
+		<File>[UPDATECACHE]\11.26100.x64\windows11.0-kb5127648-x64_2b88d2d308adc938fcd4d2876a68ee0b2a3c4c09_public.msu</File>
+		<File>[UPDATECACHE]\11.26100.x64\Windows11.0-KB5121794-x64_870a6b16d4e0e0eeeaa02b5306df5b4ecb39f563_public.msu</File>
+		<File>[UPDATECACHE]\11.26100.x64\windows11.0-kb5127694-x64-ndp481_a1a6f6d3c61e46a77278881fc5f7245bcf09ce3f_public.msu</File>
+	</Packages>
+	<Tweaks>
+		<Settings>
+			<TweakGroup name="DesktopIcons">
+				<Tweak name="NewStartPanel\{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}">1</Tweak>
+				<Tweak name="NewStartPanel\{645FF040-5081-101B-9F08-00AA002F954E}">1</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Security">
+				<Tweak name="DeviceGuard\EnableVirtualizationBasedSecurity">0</Tweak>
+				<Tweak name="Features\TamperProtection">0</Tweak>
+				<Tweak name="State\AccountProtection_MicrosoftAccount_Disconnected">0</Tweak>
+				<Tweak name="Internet Explorer\PhishingFilter\Enabledv9">0</Tweak>
+				<Tweak name="AppCompat\RequireIntegrityActivationAuthenticationLevel">0</Tweak>
+				<Tweak name="Windows\DisableATMFD">1</Tweak>
+				<Tweak name="Device\DevicePasswordLessBuildVersion">0</Tweak>
+			</TweakGroup>
+			<TweakGroup name="CopilotAI">
+				<Tweak name="Advanced\TaskbarCompanion">0</Tweak>
+				<Tweak name="WindowsAI\DisableAIDataAnalysis">1</Tweak>
+				<Tweak name="Edge\CopilotPageContext">0</Tweak>
+				<Tweak name="Edge\HubsSidebarEnabled">0</Tweak>
+				<Tweak name="WindowsNotepad\DisableAIFeatures">1</Tweak>
+				<Tweak name="WindowsCopilot\TurnOffWindowsCopilot">1</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Setup">
+				<Tweak name="LabConfig\BypassRAMCheck">1</Tweak>
+				<Tweak name="LabConfig\BypassTPMCheck">1</Tweak>
+			</TweakGroup>
+			<TweakGroup name="WindowsUpdateTasks">
+				<Tweak name="CrossDeviceUpdate\CrossDeviceUpdate">0</Tweak>
+				<Tweak name="DevHomeUpdate\DevHomeUpdate">0</Tweak>
+				<Tweak name="EdgeUpdate\EdgeUpdate">0</Tweak>
+				<Tweak name="OutlookUpdate\OutlookUpdate">0</Tweak>
+			</TweakGroup>
+			<TweakGroup name="WindowsUpdate">
+				<Tweak name="MRT\DontOfferThroughWUAU">1</Tweak>
+				<Tweak name="AU\AUOptions">2</Tweak>
+				<Tweak name="Preferences\ModelDownloadAllowed">0</Tweak>
+				<Tweak name="WindowsUpdate\ExcludeWUDriversInQualityUpdate">1</Tweak>
+				<Tweak name="Device Metadata\PreventDeviceMetadataFromNetwork">-1</Tweak>
+				<Tweak name="DriverSearching\SearchOrderConfig">0</Tweak>
+				<Tweak name="Settings\HideMCTLink">1</Tweak>
+				<Tweak name="Settings\RestartNotificationsAllowed2">0</Tweak>
+				<Tweak name="Settings\IsExpedited">0</Tweak>
+				<Tweak name="Settings\AllowMUUpdateService">0</Tweak>
+				<Tweak name="DeliveryOptimization\DODownloadMode">99</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Explorer">
+				<Tweak name="Explorer\NoRecentDocsHistory">1</Tweak>
+				<Tweak name="Explorer\ShowFrequent">0</Tweak>
+				<Tweak name="Explorer\ShowRecent">0</Tweak>
+				<Tweak name="Explorer\NoNetConnectDisconnect">0</Tweak>
+				<Tweak name="Explorer\ShowCloudFilesInQuickAccess">0</Tweak>
+				<Tweak name=".jpg\PhotoViewer.FileAssoc.Tiff">PhotoViewer.FileAssoc.Tiff</Tweak>
+				<Tweak name="Explorer\NoThumbnailCache">0</Tweak>
+				<Tweak name="Advanced\LaunchTo">1</Tweak>
+				<Tweak name="Advanced\SharingWizardOn">0</Tweak>
+				<Tweak name="Explorer\HubMode">1</Tweak>
+				<Tweak name="Explorer\NoCDBurning">1</Tweak>
+				<Tweak name="AutoplayHandlers\DisableAutoplay">1</Tweak>
+				<Tweak name="Explorer\ClearRecentDocsOnExit">1</Tweak>
+				<Tweak name="Explorer\NoReadingPane">1</Tweak>
+				<Tweak name="Advanced\HideMergeConflicts">0</Tweak>
+			</TweakGroup>
+			<TweakGroup name="TypingAndSpeech">
+				<Tweak name="Settings\AcceptedPrivacyPolicy">0</Tweak>
+				<Tweak name="InputPersonalization\AllowInputPersonalization">0</Tweak>
+				<Tweak name="TIPC\Enabled">0</Tweak>
+				<Tweak name="TrainedDataStore\HarvestContacts">0</Tweak>
+				<Tweak name="InputPersonalization\RestrictImplicitInkCollection">1</Tweak>
+				<Tweak name="InputPersonalization\RestrictImplicitTextCollection">1</Tweak>
+				<Tweak name="Settings\InsightsEnabled">0</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Performance">
+				<Tweak name="Power\HiberbootEnabled">0</Tweak>
+			</TweakGroup>
+			<TweakGroup name="System">
+				<Tweak name="GameBar\UseNexusForGameBarEnabled">0</Tweak>
+				<Tweak name="SmartGlass\UserAuthPolicy">0</Tweak>
+				<Tweak name="SmartGlass\BluetoothPolicy">0</Tweak>
+				<Tweak name="SettingSync\EnableWindowsBackup">0</Tweak>
+				<Tweak name="SettingSync\DisableSettingSyncUserOverride">1</Tweak>
+				<Tweak name="System\EnableLinkedConnections">0</Tweak>
+				<Tweak name="Appx\AllowAutomaticAppArchiving">0</Tweak>
+				<Tweak name="System\AllowClipboardHistory">0</Tweak>
+				<Tweak name="OneDrive\DisableFileSyncNGSC">1</Tweak>
+				<Tweak name="System\ShutdownWithoutLogon">0</Tweak>
+			</TweakGroup>
+			<TweakGroup name="NavigationPane">
+				<Tweak name="{e88865ea-0e1c-4e20-9aa6-edcd0212c87c}\HiddenByDefault">1</Tweak>
+				<Tweak name="{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\ShellFolder\Attributes">-1332477852</Tweak>
+				<Tweak name="{f874310e-b6b7-47dc-bc84-b9e6b38f5903}\HiddenByDefault">1</Tweak>
+				<Tweak name="{031E4825-7B94-4dc3-B131-E946B44C8DD5}\System.IsPinnedToNameSpaceTree">0</Tweak>
+				<Tweak name="Advanced\NavPaneExpandToCurrentFolder">0</Tweak>
+			</TweakGroup>
+			<TweakGroup name="CrashControl">
+				<Tweak name="CrashControl\LogEvent">0</Tweak>
+				<Tweak name="CrashControl\CrashDumpEnabled">0</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Storage">
+				<Tweak name="StoragePolicy\01">0</Tweak>
+				<Tweak name="DiskQuota\Enable">0</Tweak>
+				<Tweak name="StoragePolicy\256">0</Tweak>
+				<Tweak name="StoragePolicy\512">0</Tweak>
+				<Tweak name="StoragePolicy\04">0</Tweak>
+				<Tweak name="FileSystem\LongPathsEnabled">1</Tweak>
+			</TweakGroup>
+			<TweakGroup name="StartTweaks">
+				<Tweak name="Advanced\Start_TrackProgs">0</Tweak>
+				<Tweak name="Start\HideSwitchAccount">1</Tweak>
+				<Tweak name="Start\AllAppsViewMode">2</Tweak>
+				<Tweak name="Advanced\Start_TrackDocs" level="Policy" policy="HideRecentJumplists">1</Tweak>
+				<Tweak name="Start\ShowFrequentList" level="Policy" policy="ShowOrHideMostUsedApps">2</Tweak>
+				<Tweak name="FlyoutMenuSettings\ShowLockOption" level="Policy">0</Tweak>
+				<Tweak name="FlyoutMenuSettings\ShowSleepOption" level="Policy">0</Tweak>
+				<Tweak name="FlyoutMenuSettings\ShowHibernateOption" level="Policy">0</Tweak>
+				<Tweak name="Start\HideUserTile">1</Tweak>
+				<Tweak name="Start\HideSignOut">1</Tweak>
+			</TweakGroup>
+			<TweakGroup name="DesktopTweaks">
+				<Tweak name="Winlogon\EnableGoodbye">0</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Network">
+				<Tweak name="FlipAhead\FPEnabled">0</Tweak>
+				<Tweak name="AnqpCache\OsuRegistrationStatus">0</Tweak>
+				<Tweak name="features\PaidWifi">0</Tweak>
+				<Tweak name="features\WiFiSenseOpen">0</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Privacy">
+				<Tweak name="System\EnableActivityFeed">0</Tweak>
+				<Tweak name="Shell\BagMRU Size">1</Tweak>
+			</TweakGroup>
+			<TweakGroup name="AppAccess">
+				<Tweak name="LooselyCoupled\Value">Deny</Tweak>
+				<Tweak name="System\AllowLocation">0</Tweak>
+				<Tweak name="BackgroundAccessApplications\GlobalUserDisabled">1</Tweak>
+				<Tweak name="phoneCall\Value">Deny</Tweak>
+				<Tweak name="appointments\Value">Deny</Tweak>
+				<Tweak name="userDataTasks\Value">Deny</Tweak>
+				<Tweak name="email\Value">Deny</Tweak>
+				<Tweak name="broadFileSystemAccess\Value">Deny</Tweak>
+				<Tweak name="contacts\Value">Deny</Tweak>
+				<Tweak name="phoneCallHistory\Value">Deny</Tweak>
+				<Tweak name="radios\Value">Deny</Tweak>
+				<Tweak name="userNotificationListener\Value">Deny</Tweak>
+				<Tweak name="appDiagnostics\Value">Deny</Tweak>
+				<Tweak name="userAccountInformation\Value">Deny</Tweak>
+				<Tweak name="documentsLibrary\Value">Deny</Tweak>
+				<Tweak name="videosLibrary\Value">Deny</Tweak>
+				<Tweak name="picturesLibrary\Value">Deny</Tweak>
+				<Tweak name="chat\Value">Deny</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Telemetry">
+				<Tweak name="Client\OptInOrOutPreference">0</Tweak>
+				<Tweak name="User Profile\HttpAcceptLanguageOptOut">1</Tweak>
+				<Tweak name="DataCollection\AllowTelemetry">0</Tweak>
+				<Tweak name="System\AllowExperimentation">0</Tweak>
+				<Tweak name="AdvertisingInfo\Enabled">0</Tweak>
+				<Tweak name="Privacy\TailoredExperiencesWithDiagnosticDataEnabled">0</Tweak>
+				<Tweak name="AppCompat\DisableInventory">1</Tweak>
+				<Tweak name="AppCompat\DisablePCA">1</Tweak>
+				<Tweak name="Rules\NumberOfSIUFInPeriod">0</Tweak>
+			</TweakGroup>
+			<TweakGroup name="TaskbarTweaks">
+				<Tweak name="Explorer\NoPinningStoreToTaskbar">1</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Notifications">
+				<Tweak name="Notifications\DisableNotifications">1</Tweak>
+				<Tweak name="QuietHours\Enable">0</Tweak>
+				<Tweak name="Advanced\FolderContentsInfoTip">1</Tweak>
+				<Tweak name="PushNotifications\NoCloudApplicationNotification">1</Tweak>
+				<Tweak name="Explorer\EnableLegacyBalloonNotifications">1</Tweak>
+				<Tweak name="Notifications\DisableEnhancedNotifications">1</Tweak>
+				<Tweak name="PushNotifications\ToastEnabled">0</Tweak>
+			</TweakGroup>
+			<TweakGroup name="StartFolders">
+				<Tweak name="Start\AllowPinnedFolderSettings">1</Tweak>
+				<Tweak name="Start\AllowPinnedFolderPictures">0</Tweak>
+				<Tweak name="Start\AllowPinnedFolderNetwork">0</Tweak>
+				<Tweak name="Start\AllowPinnedFolderMusic">0</Tweak>
+				<Tweak name="Start\AllowPinnedFolderPersonalFolder">0</Tweak>
+				<Tweak name="Start\AllowPinnedFolderFileExplorer">0</Tweak>
+				<Tweak name="Start\AllowPinnedFolderDocuments">0</Tweak>
+				<Tweak name="Start\AllowPinnedFolderDownloads">1</Tweak>
+				<Tweak name="Start\AllowPinnedFolderVideos">0</Tweak>
+			</TweakGroup>
+			<TweakGroup name="PrivacySearch">
+				<Tweak name="Windows Search\AllowCloudSearch">0</Tweak>
+			</TweakGroup>
+			<TweakGroup name="FolderOptions">
+				<Tweak name="Advanced\HideFileExt">0</Tweak>
+				<Tweak name="Advanced\Hidden">1</Tweak>
+			</TweakGroup>
+			<TweakGroup name="SignIn">
+				<Tweak name="System\HideFastUserSwitching">1</Tweak>
+				<Tweak name="Personalization\NoLockScreen">1</Tweak>
+				<Tweak name="Desktop\ScreenSaverIsSecure">0</Tweak>
+				<Tweak name="System\DisableAutomaticRestartSignOn">1</Tweak>
+				<Tweak name="System\NoConnectedUser">3</Tweak>
+				<Tweak name="Winlogon\RestartApps">0</Tweak>
+			</TweakGroup>
+			<TweakGroup name="Graphics">
+				<Tweak name="UserGpuPreferences\DirectXUserGlobalSettings">VRROptimizeEnable=0</Tweak>
+			</TweakGroup>
+			<TweakGroup name="BundledApps">
+				<Tweak name="AppSettings\Skype-UserConsentAccepted">0</Tweak>
+				<Tweak name="ContentDeliveryManager\SubscribedContent-338393Enabled">0</Tweak>
+				<Tweak name="AccountNotifications\EnableAccountNotifications">0</Tweak>
+				<Tweak name="CloudContent\DisableCloudOptimizedContent">1</Tweak>
+				<Tweak name="Communications\ConfigureChatAutoInstall">0</Tweak>
+				<Tweak name="CloudContent\DisableWindowsConsumerFeatures">1</Tweak>
+				<Tweak name="CloudContent\DisableWindowsSpotlightFeatures">1</Tweak>
+				<Tweak name="UserProfileEngagement\ScoobeSystemSettingEnabled">0</Tweak>
+			</TweakGroup>
+		</Settings>
+		<Services>
+			<TweakGroup name="services">
+				<Tweak name="Bonjour Service\Bonjour Service">3</Tweak>
+				<Tweak name="CDPUserSvc\CDPUserSvc">4</Tweak>
+				<Tweak name="ConsentUxUserSvc\ConsentUxUserSvc">4</Tweak>
+				<Tweak name="PimIndexMaintenanceSvc\PimIndexMaintenanceSvc">4</Tweak>
+				<Tweak name="DispBrokerDesktopSvc\DispBrokerDesktopSvc">3</Tweak>
+				<Tweak name="SEMgrSvc\SEMgrSvc">4</Tweak>
+				<Tweak name="PcaSvc\PcaSvc">4</Tweak>
+				<Tweak name="SysMain\SysMain">4</Tweak>
+				<Tweak name="TapiSrv\TapiSrv">4</Tweak>
+				<Tweak name="WbioSrvc\WbioSrvc">4</Tweak>
+				<Tweak name="WSearch\WSearch">4</Tweak>
+				<Tweak name="ZTHELPER\ZTHELPER">4</Tweak>
+			</TweakGroup>
+		</Services>
+		<Visuals>
+			<TweakGroup name="Theme">
+				<Tweak name="Personalize\SystemUsesLightTheme">0</Tweak>
+				<Tweak name="Personalize\AppsUseLightTheme">0</Tweak>
+			</TweakGroup>
+			<TweakGroup name="VisualEffectsSystem">
+				<Tweak name="DWM\EnableAeroPeek">0</Tweak>
+				<Tweak name="Desktop\UPM_ListSmooth">0</Tweak>
+				<Tweak name="Desktop\UPM_CursorShadow">1</Tweak>
+				<Tweak name="Advanced\TaskbarAnimations">0</Tweak>
+				<Tweak name="Desktop\UPM_MenuFade">0</Tweak>
+				<Tweak name="Desktop\UPM_TooltipFade">0</Tweak>
+				<Tweak name="Desktop\UPM_ComboSlide">0</Tweak>
+				<Tweak name="Desktop\UPM_AnimCtrl">0</Tweak>
+				<Tweak name="WindowMetrics\MinAnimate"></Tweak>
+				<Tweak name="Desktop\UPM_SelectFade">0</Tweak>
+			</TweakGroup>
+			<TweakGroup name="PointerOptions">
+				<Tweak name="Mouse\MouseSpeed">0</Tweak>
+				<Tweak name="Desktop\MenuShowDelay">100</Tweak>
+			</TweakGroup>
+		</Visuals>
+	</Tweaks>
+	<ApplyOptions>
+		<ImageTasks></ImageTasks>
+		<AutoIsoFile>?:\Downloads\W11.iso</AutoIsoFile>
+		<AutoIsoLabel>W11</AutoIsoLabel>
+		<WinReMode>Sync</WinReMode>
+		<Commands>
+			<PostApply>
+				<!--<Command>cmd /C echo Example from "[MOUNTDIR]\Windows" &amp; pause</Command>-->
+				<!--<Command>cmd /C dism /image:"[MOUNTDIR]" /get-intl</Command>-->
+				<!--<Command>C:\PathToScript\test.cmd</Command>-->
+			</PostApply>
+		</Commands>
+	</ApplyOptions>
+</Preset>
