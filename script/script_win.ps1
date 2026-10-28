@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Giao diện Terminal TUI Menu lồng Menu (Multi-level Interactive TUI Menu)
     Hệ thống cài đặt & Quản trị Windows 11 IT & Dev Edition.
@@ -10,6 +10,7 @@
 
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 $Host.UI.RawUI.WindowTitle = "WINDOWS 11 IT & DEV EDITION - CONTROL CENTER"
+Clear-Host
 
 # ==============================================================================
 # LẤY THÔNG TIN CẤU HÌNH PHẦN CỨNG HỆ THỐNG (LẤY 1 LẦN KHI KHỞI ĐỘNG)
@@ -36,6 +37,25 @@ $global:sysSpecs = try {
 # ==============================================================================
 # HÀM BỔ TRỢ GIAO DIỆN & TIỆN ÍCH
 # ==============================================================================
+
+function Show-Header {
+    param (
+        [string]$SubTitle = "",
+        [string]$Breadcrumb = ""
+    )
+    Clear-Host
+    Write-Host ""
+    Write-Host "  =========================================================================================" -ForegroundColor Cyan
+    Write-Host "                 HỆ THỐNG CÀI ĐẶT & QUẢN TRỊ WINDOWS 11 IT & DEV EDITION                   " -ForegroundColor Yellow
+    Write-Host "  =========================================================================================" -ForegroundColor Cyan
+    if ($Breadcrumb) {
+        Write-Host "  📌 $Breadcrumb" -ForegroundColor DarkGray
+    }
+    if ($SubTitle) {
+        Write-Host "  🚀 $SubTitle" -ForegroundColor Green
+    }
+    Write-Host ""
+}
 
 function Clear-InputBuffer {
     try { $Host.UI.RawUI.FlushInputBuffer() } catch {}
@@ -178,8 +198,7 @@ function Install-SelectedApps {
         Show-ProgressBar -Current ($currentApp - 1) -Total $totalApps
         Write-Host ""
         Write-Host "  [+] [$numStr/$totalApps] Đang tải & cài đặt: " -NoNewline -ForegroundColor Cyan
-        Write-Host "$($item.Name) " -NoNewline -ForegroundColor White
-        Write-Host "($($item.Id))..." -ForegroundColor DarkGray
+        Write-Host "$($item.Name)..." -ForegroundColor White
 
         try {
             $process = Start-Process -FilePath "winget" -ArgumentList ("install --id `"$($item.Id)`" -e " + ($commonArgs -join " ")) -NoNewWindow -PassThru -Wait
@@ -230,34 +249,36 @@ function Show-AppSelectionTable {
     while ($true) {
         Show-Header -SubTitle "BẢNG CHỌN ỨNG DỤNG CẦN CÀI ĐẶT" -Breadcrumb "MAIN MENU > [1] CÀI ĐẶT ỨNG DỤNG"
 
-        Write-Host "  ┌────┬─────────────────────────────┬────────────────────────────────────┬──────────────┐" -ForegroundColor DarkGray
-        Write-Host "  │ #  │ TÊN ỨNG DỤNG                │ PACKAGE ID (WINGET)                │ NHÓM         │" -ForegroundColor Cyan
-        Write-Host "  ├────┼─────────────────────────────┼────────────────────────────────────┼──────────────┤" -ForegroundColor DarkGray
+        Write-Host "  ┌────┬───────────────────────────────────────────────────────────┬───────────────────┐" -ForegroundColor DarkGray
+        Write-Host "  │ #  │ TÊN ỨNG DỤNG                                              │ PHÂN LOẠI         │" -ForegroundColor Cyan
+        Write-Host "  ├────┼───────────────────────────────────────────────────────────┼───────────────────┤" -ForegroundColor DarkGray
 
         $index = 1
         foreach ($item in $global:appList) {
             $numStr  = $index.ToString("00")
-            $nameStr = $item.Name.PadRight(27)
-            $idStr   = $item.Id.PadRight(34)
-            $catStr  = $item.Cat.PadRight(12)
+            $nameStr = $item.Name
+            if ($nameStr.Length -gt 57) { $nameStr = $nameStr.Substring(0, 54) + "..." }
+            $namePadded = $nameStr.PadRight(57)
+
+            $catStr  = $item.Cat
+            if ($catStr.Length -gt 17) { $catStr = $catStr.Substring(0, 14) + "..." }
+            $catPadded = $catStr.PadRight(17)
 
             Write-Host "  │ " -NoNewline -ForegroundColor DarkGray
             Write-Host $numStr -NoNewline -ForegroundColor Yellow
             Write-Host " │ " -NoNewline -ForegroundColor DarkGray
-            Write-Host $nameStr -NoNewline -ForegroundColor White
+            Write-Host $namePadded -NoNewline -ForegroundColor White
             Write-Host " │ " -NoNewline -ForegroundColor DarkGray
-            Write-Host $idStr -NoNewline -ForegroundColor DarkCyan
-            Write-Host " │ " -NoNewline -ForegroundColor DarkGray
-            Write-Host $catStr -NoNewline -ForegroundColor Magenta
+            Write-Host $catPadded -NoNewline -ForegroundColor Magenta
             Write-Host " │" -ForegroundColor DarkGray
             $index++
         }
-        Write-Host "  └────┴─────────────────────────────┴────────────────────────────────────┴──────────────┘" -ForegroundColor DarkGray
+        Write-Host "  └────┴───────────────────────────────────────────────────────────┴───────────────────┘" -ForegroundColor DarkGray
         Write-Host ""
 
         Write-Host "  ╔═══════════════════════════════════════════════════════════════════════════════════════╗" -ForegroundColor Yellow
         Write-Host "  ║  HƯỚNG DẪN CHỌN CÀI ĐẶT:                                                              ║" -ForegroundColor Yellow
-        Write-Host "  ║   • Nhập số (VD: 1,3,7,10 hoặc 1-5) để chỉ cài các ứng dụng tương ứng                 ║" -ForegroundColor White
+        Write-Host "  ║   • Nhập số (VD: 1,3,7,10 hoặc 1-5) để cài ứng dụng tương ứng                         ║" -ForegroundColor White
         Write-Host "  ║   • Nhấn [Enter] trực tiếp để cài đặt TẤT CẢ ($($global:appList.Count) ứng dụng)                               ║" -ForegroundColor White
         Write-Host "  ║   • Nhập '0' hoặc 'B' để QUAY LẠI Menu chính                                          ║" -ForegroundColor White
         Write-Host "  ╚═══════════════════════════════════════════════════════════════════════════════════════╝" -ForegroundColor Yellow
@@ -323,7 +344,45 @@ function Show-AppSelectionTable {
 }
 
 # ==============================================================================
+# HÀM CHUẨN HÓA & TRÍCH XUẤT URL (HỖ TRỢ CẢ HTTP, HTTPS & CHUỖI IRM/IEX)
+# ==============================================================================
+function Get-NormalizedUrl {
+    param ([string]$InputText)
+
+    if ([string]::IsNullOrWhiteSpace($InputText)) { return $null }
+    $clean = $InputText.Trim().Trim('"').Trim("'")
+
+    # Nếu người dùng paste cả câu lệnh: irm "https://..." | iex hoặc iwr "https://..."
+    if ($clean -match '(?:irm|Invoke-RestMethod|iwr|Invoke-WebRequest)\s+["'']?([^\s"'']+)["'']?') {
+        $clean = $matches[1]
+    }
+    # Hoặc chuỗi có chứa https:// hoặc http://
+    elseif ($clean -match '(https?://[^\s"''>|]+)') {
+        $clean = $matches[1]
+    }
+
+    # Bỏ dấu ngoặc, pipe hoặc ký tự rác nếu có
+    $clean = $clean.Trim().Trim(')','|','}','"',"'")
+
+    # Nếu người dùng không nhập scheme (ví dụ: get.activated.win hoặc christitus.com/win)
+    if ($clean -notmatch '^https?://') {
+        $clean = "https://" + $clean.TrimStart('/')
+    }
+
+    # Kiểm tra tính hợp lệ của URI
+    $uriResult = $null
+    if ([System.Uri]::TryCreate($clean, [System.UriKind]::Absolute, [ref]$uriResult)) {
+        if ($uriResult.Scheme -eq "http" -or $uriResult.Scheme -eq "https") {
+            return $uriResult.AbsoluteUri
+        }
+    }
+
+    return $null
+}
+
+# ==============================================================================
 # CHỨC NĂNG CHẠY ONLINE SCRIPT QUA LINK IRM (INVOKE-RESTMETHOD | INVOKE-EXPRESSION)
+# Hỗ trợ cả HTTP & HTTPS, tự động kích hoạt TLS 1.2/1.3 và xử lý lỗi mạng
 # ==============================================================================
 function Execute-IrmLink {
     param (
@@ -331,18 +390,34 @@ function Execute-IrmLink {
         [string]$Title = "Script Online"
     )
 
-    if ([string]::IsNullOrWhiteSpace($Url)) {
-        Write-Host "  [!] URL không hợp lệ!" -ForegroundColor Red
+    $validUrl = Get-NormalizedUrl -InputText $Url
+    if (-not $validUrl) {
+        Write-Host "  [!] URL không hợp lệ: '$Url'" -ForegroundColor Red
+        Write-Host "      Vui lòng nhập định dạng http:// hoặc https:// hợp lệ!" -ForegroundColor DarkGray
         Wait-KeyPress
         return
     }
 
+    $isHttpInsecure = $validUrl.StartsWith("http://", [System.StringComparison]::OrdinalIgnoreCase)
+
     Show-Header -SubTitle "CHẠY ONLINE SCRIPT: $Title" -Breadcrumb "MAIN MENU > [2] CHẠY LINK IRM > THỰC THI"
-    Write-Host "  [*] URL mục tiêu: " -NoNewline -ForegroundColor DarkGray
-    Write-Host "$Url" -ForegroundColor Cyan
+    Write-Host "  [*] URL mục tiêu : " -NoNewline -ForegroundColor DarkGray
+    Write-Host "$validUrl" -ForegroundColor Cyan
+    Write-Host "  [*] Giao thức    : " -NoNewline -ForegroundColor DarkGray
+    if ($isHttpInsecure) {
+        Write-Host "HTTP (Không mã hóa - Kém an toàn)" -ForegroundColor Red
+    } else {
+        Write-Host "HTTPS (Mã hóa SSL/TLS an toàn)" -ForegroundColor Green
+    }
     Write-Host "  [*] Lệnh thực thi: " -NoNewline -ForegroundColor DarkGray
-    Write-Host "irm `"$Url`" | iex" -ForegroundColor Yellow
+    Write-Host "irm `"$validUrl`" | iex" -ForegroundColor Yellow
     Write-Host ""
+
+    if ($isHttpInsecure) {
+        Write-Host "  [!] CẢNH BÁO: Script chạy qua giao thức HTTP không được mã hóa." -ForegroundColor Red
+        Write-Host "      Nội dung script có nguy cơ bị can thiệp nếu bạn đang dùng Wi-Fi/mạng lạ!" -ForegroundColor DarkYellow
+        Write-Host ""
+    }
 
     # Kiểm tra kết nối Internet
     Write-Host "  [Kiểm tra kết nối Internet]" -ForegroundColor Yellow
@@ -362,12 +437,21 @@ function Execute-IrmLink {
         return
     }
 
-    Write-Host "`n  [*] Đang tải và thực thi: irm `"$Url`" | iex ..." -ForegroundColor Yellow
+    Write-Host "`n  [*] Đang tải và thực thi: irm `"$validUrl`" | iex ..." -ForegroundColor Yellow
     Write-Host "  ─────────────────────────────────────────────────────────────────────────────────────────" -ForegroundColor DarkGray
 
     try {
+        # Đảm bảo bật TLS 1.2 và TLS 1.3 (nếu hệ thống hỗ trợ) để tránh lỗi handshake SSL
         [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls12
-        Invoke-Expression (Invoke-RestMethod -Uri $Url -UseBasicParsing)
+        try {
+            [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor [Net.SecurityProtocolType]::Tls13
+        } catch {}
+
+        # Tải nội dung script kèm User-Agent để tránh bị web server / CDN chặn request từ PowerShell
+        $headers = @{ "User-Agent" = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) PowerShell/IRM" }
+        $scriptContent = Invoke-RestMethod -Uri $validUrl -UseBasicParsing -Headers $headers
+        Invoke-Expression $scriptContent
+
         Write-Host ""
         Write-Host "  ─────────────────────────────────────────────────────────────────────────────────────────" -ForegroundColor DarkGray
         Write-Host "  [✔] ĐÃ HOÀN TẤT THỰC THI SCRIPT!" -ForegroundColor Green
@@ -472,6 +556,14 @@ function Show-SystemSpecsBox {
 # ==============================================================================
 function Show-MainMenu {
     while ($true) {
+        Clear-Host
+        Write-Host ""
+        Write-Host "  =========================================================================================" -ForegroundColor Cyan
+        Write-Host "                 HỆ THỐNG CÀI ĐẶT & QUẢN TRỊ WINDOWS 11 IT & DEV EDITION                   " -ForegroundColor Yellow
+        Write-Host "  =========================================================================================" -ForegroundColor Cyan
+        Write-Host "  📌 TRANG CHỦ / MAIN MENU" -ForegroundColor DarkGray
+        Write-Host ""
+
         Show-SystemSpecsBox
 
         Write-Host "  ┌────┬───────────────────────────────────────────────────────────┬───────────────────┐" -ForegroundColor DarkGray

@@ -121,10 +121,7 @@
 		<c>mediaplayernetworksharing 'Dịch vụ Chia sẻ Mạng WMP'</c>
 		<c>mediaplayernetworksharing32 'Dịch vụ Chia sẻ Mạng WMP - 32 bit'</c>
 		<c>microsoft.aad.brokerplugin 'Tài khoản trường học hoặc công ty'</c>
-		<c>microsoft.accountscontrol 'Email và tài khoản'</c>
 		<c>microsoft.asynctextservice 'AsyncTextService'</c>
-		<c>microsoft.bioenrollment 'Thiết lập Windows Hello'</c>
-		<c>microsoft.creddialoghost 'Hộp thoại Thông tin đăng nhập'</c>
 		<c>microsoft.ecapp 'Điều khiển bằng Mắt'</c>
 		<c>microsoft.heifimageextension 'Phần mở rộng hình ảnh HEIF'</c>
 		<c>microsoft.lockapp 'Màn hình Khóa Mặc định của Windows'</c>
@@ -425,7 +422,7 @@
 				<Tweak name="Shell\BagMRU Size">1</Tweak>
 			</TweakGroup>
 			<TweakGroup name="AppAccess">
-				<Tweak name="LooselyCoupled\Value">Deny</Tweak>
+				<Tweak name="LooselyCoupled\Value">Allow</Tweak>
 				<Tweak name="BackgroundAccessApplications\GlobalUserDisabled">1</Tweak>
 				<Tweak name="phoneCall\Value">Deny</Tweak>
 				<Tweak name="appointments\Value">Deny</Tweak>
@@ -435,7 +432,7 @@
 				<Tweak name="contacts\Value">Deny</Tweak>
 				<Tweak name="phoneCallHistory\Value">Deny</Tweak>
 				<Tweak name="systemAIModels\Value">Deny</Tweak>
-				<Tweak name="radios\Value">Deny</Tweak>
+				<Tweak name="radios\Value">Allow</Tweak>
 				<Tweak name="userNotificationListener\Value">Deny</Tweak>
 				<Tweak name="appDiagnostics\Value">Deny</Tweak>
 				<Tweak name="userAccountInformation\Value">Deny</Tweak>
@@ -509,19 +506,19 @@
 		<Services>
 			<TweakGroup name="services">
 				<Tweak name="Bonjour Service\Bonjour Service">3</Tweak>
-				<Tweak name="CDPUserSvc\CDPUserSvc">4</Tweak>
-				<Tweak name="ConsentUxUserSvc\ConsentUxUserSvc">4</Tweak>
+				<Tweak name="CDPUserSvc\CDPUserSvc">3</Tweak>
+				<Tweak name="ConsentUxUserSvc\ConsentUxUserSvc">3</Tweak>
 				<Tweak name="PimIndexMaintenanceSvc\PimIndexMaintenanceSvc">4</Tweak>
 				<Tweak name="DoSvc\DoSvc">4</Tweak>
 				<Tweak name="DispBrokerDesktopSvc\DispBrokerDesktopSvc">3</Tweak>
 				<Tweak name="TrkWks\TrkWks">3</Tweak>
 				<Tweak name="edgeupdate\edgeupdate">3</Tweak>
 				<Tweak name="SEMgrSvc\SEMgrSvc">4</Tweak>
-				<Tweak name="PhoneSvc\PhoneSvc">4</Tweak>
+				<Tweak name="PhoneSvc\PhoneSvc">3</Tweak>
 				<Tweak name="PcaSvc\PcaSvc">4</Tweak>
 				<Tweak name="SysMain\SysMain">4</Tweak>
 				<Tweak name="TapiSrv\TapiSrv">4</Tweak>
-				<Tweak name="WbioSrvc\WbioSrvc">4</Tweak>
+				<Tweak name="WbioSrvc\WbioSrvc">3</Tweak>
 				<Tweak name="WSearch\WSearch">4</Tweak>
 				<Tweak name="ZTHELPER\ZTHELPER">4</Tweak>
 			</TweakGroup>
